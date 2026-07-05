@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"nodemon index.js\" \"sass --watch scss:public/css\" \"browser-sync start --proxy \\\"localhost:3000\\\" --files \\\"public/**/*, views/**/*\\\"\""
   },
   "dependencies": {
     "ejs": "^6.0.1",

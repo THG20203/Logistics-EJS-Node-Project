@@ -1,0 +1,10 @@
+node_modules/
+.env
+.DS_Store
+
+Frontend/node_modules/
+Backend/node_modules/
+
+Frontend/public/css/style.css.map
+Backend/.env
+Frontend/.env
