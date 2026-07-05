@@ -4,10 +4,10 @@
   "description": "Frontend EJS Haulage Website",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"sass --watch scss:public/css\" \"browser-sync start --proxy \\\"localhost:3000\\\" --files \\\"public/**/*, views/**/*\\\"\""
+    "dev": "concurrently \"nodemon index.js\" \"sass --watch scss:public/css\" \"browser-sync start --proxy \\\"localhost:3000\\\" --files \\\"public/**/*, views/**/*\\\" --port 3001 --ui-port 3002\""
   },
   "dependencies": {
     "ejs": "^6.0.1",
