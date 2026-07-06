@@ -20,6 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/", pageRoutes);
+// app.use("/auth", authRoutes);
+// app.use("/dashboard", dashboardRoutes);
 
 app.listen(PORT, () => {
   console.log(`Frontend running on http://localhost:${PORT}`);
