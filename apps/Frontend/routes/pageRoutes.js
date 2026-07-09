@@ -11,7 +11,8 @@ const router = Router();
 Router = collection of routes. 
 Route = one HTTP method + URL path + controller function. 
 
-i.e. GET method should run homePage controller */
+i.e. GET method should run homePage controller for / URl path 
+*/
 
 router.get("/", homePage);
 // router.get("/about", aboutPage);
