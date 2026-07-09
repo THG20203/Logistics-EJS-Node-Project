@@ -1,4 +1,5 @@
 /* Full express import -> express can create actual app. */
+/* This is for EJS frontend, EJS needs a server to render it (server side rendering). */
 import express from "express";
 
 /* Node's built in path module for safely joining up file paths. */
