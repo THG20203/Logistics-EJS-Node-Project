@@ -19,12 +19,14 @@ const app = express();
 /* Port number for local server */
 const PORT = 3000;
 
-/* Get FILE NAME of current file. With ES modules, Node gives me import.meta.url 
+/* Get full FILE NAME of current file. With ES modules, Node gives me import.meta.url 
 (a file URL). 'fileURLToPath' converts it into normal FILE path. */
 const __filename = fileURLToPath(import.meta.url);
 
-/* Get the FOLDER path only from the current full FILE file path */
+/* Get the FOLDER path from the current full file path */
 const __dirname = path.dirname(__filename);
+
+// SETTINGS (configuring express) //
 
 /* Set EJS as template / view engine */
 app.set("view engine", "ejs");
@@ -32,11 +34,13 @@ app.set("view engine", "ejs");
 /* Join current folder path to the views folder for rendering views. */
 app.set("views", path.join(__dirname, "views"));
 
+// MIDDLEWARE / ROUTES (things the app should use when request come in) //
+
 /* Let browser access static files in public + assets folder */
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
-/* Express read form + json data */
+/* Let express read form + json data */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
