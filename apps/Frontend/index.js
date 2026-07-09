@@ -1,43 +1,50 @@
-/* need full express important because express creates actual app. */
+/* Full express import -> express can create actual app. */
 import express from "express";
 
-/* import Node's built in path module */
+/* Node's built in path module for safely joining up file paths. */
 import path from "path";
 
-/* fileURLToPath = for safe paths for pointing Express to views folder, public folder, assets folder. */
+/* Convert import.meta.url (full FILE url) into normal file path */
 import { fileURLToPath } from "url";
 
-/* import page routes so main app can use routes in routes files. */
+/* Import page routes so main app can use them. */
 import pageRoutes from "./routes/pageRoutes.js";
 // import authRoutes from "./routes/authRoutes.js";
 // import dashboardRoutes from "./routes/dashboardRoutes.js";
 
-/* create Express app -> app object -> attach settings, middleware, routes, server */
+/* Create Express app. */
 const app = express();
 
-/* port number for local server to run on */
+/* Port number for local server */
 const PORT = 3000;
 
+/* Get FILE NAME of current file. With ES modules, Node gives me import.meta.url 
+(a file URL). 'fileURLToPath' converts it into normal FILE path. */
 const __filename = fileURLToPath(import.meta.url);
+
+/* Get the FOLDER path only from the current full FILE file path */
 const __dirname = path.dirname(__filename);
 
-/* Tell express use EJS as template / view engine */
+/* Set EJS as template / view engine */
 app.set("view engine", "ejs");
+
+/* Join current folder path to the views folder for rendering views. */
 app.set("views", path.join(__dirname, "views"));
 
+/* Let browser access static files in public + assets folder */
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "assets")));
 
-/* let Express read form data */
+/* Express read form + json data */
 app.use(express.urlencoded({ extended: true }));
-
-/* let Express use JSON data */
 app.use(express.json());
 
-/* connect pageRoutes file to the app */
+/* Connect pageRoutes to the app */
 app.use("/", pageRoutes);
 // app.use("/auth", authRoutes);
 // app.use("/dashboard", dashboardRoutes);
 
+/* Start server -> listen for requests */
 app.listen(PORT, () => {
   console.log(`Frontend running on http://localhost:${PORT}`);
 });

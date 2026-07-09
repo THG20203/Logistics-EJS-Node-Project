@@ -1,7 +1,7 @@
-/* only need to import router function from express because don't need whole express object in this file */
+/* Need router function from express, not whole object */
 import { Router } from "express";
 
-/* pageRoutes.js (this file) decides which controller function belongs to which URL. So needs 
+/* this file decides which controller function belongs to which URL. So needs 
 to know about your controller functions -> hence why homePage is imported from pageController.js. */
 /* route file needs to connect URL's to controller functions. */
 import { homePage } from "../controllers/pageController.js";
