@@ -1,7 +1,8 @@
-import express from "express";
+/* only need to import router function from express because don't need whole express object in this file */
+import { Router } from "express";
 import { homePage } from "../controllers/pageController.js";
 
-const router = express.Router();
+const router = Router();
 
 router.get("/", homePage);
 // router.get("/about", aboutPage);
