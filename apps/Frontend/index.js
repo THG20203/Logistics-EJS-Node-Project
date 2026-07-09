@@ -33,7 +33,7 @@ app.set("views", path.join(__dirname, "views"));
 
 /* Let browser access static files in public + assets folder */
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "assets")));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 /* Express read form + json data */
 app.use(express.urlencoded({ extended: true }));
