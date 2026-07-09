@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 /* let Express use JSON data */
 app.use(express.json());
 
+/* connect pageRoutes file to the app */
 app.use("/", pageRoutes);
 // app.use("/auth", authRoutes);
 // app.use("/dashboard", dashboardRoutes);

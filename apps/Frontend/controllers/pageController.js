@@ -1,6 +1,7 @@
 /* Controller file does not import the route file because the controller should not care 
 what URL triggered it. It's only job is to render the page. */
 
+/* homePage controller render function */
 export const homePage = (req, res) => {
   res.render("index", {
     pageTitle: "Home",
