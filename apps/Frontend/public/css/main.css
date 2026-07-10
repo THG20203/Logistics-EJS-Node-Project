@@ -14,7 +14,6 @@ html {
 body {
   /* Padding and border included INSIDE the specified width/height instead of being added on top. */
   box-sizing: border-box;
-  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
