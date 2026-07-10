@@ -1,3 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+  /* ^ 62.5% (because 10px would overwrite peoples browser declarations) 10px / 16px * 100  */
+}
+
+body {
+  /* Padding and border included INSIDE the specified width/height instead of being added on top. */
+  box-sizing: border-box;
+  background-color: red;
+}
 
 /*# sourceMappingURL=main.css.map */
