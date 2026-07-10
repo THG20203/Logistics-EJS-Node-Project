@@ -1,3 +1,3 @@
 export const initMobileMenu = () => {
-  alert("Hello the Mobile Menu JS test");
+  console.log("Hello the Mobile Menu JS test");
 };
