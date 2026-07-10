@@ -7,7 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"sass --watch scss:public/css\" \"browser-sync start --proxy \\\"localhost:3000\\\" --files \\\"public/**/*, views/**/*\\\" --port 3001 --ui-port 3002\""
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:sass\"",
+    "dev:server": "nodemon index.js",
+    "dev:sass": "sass --watch scss:public/css --style=compressed --no-source-map"
   },
   "dependencies": {
     "ejs": "^6.0.1",
