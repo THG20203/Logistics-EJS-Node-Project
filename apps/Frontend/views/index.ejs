@@ -3,12 +3,12 @@
   <!-- header for every page -->
   <%- include('partials/head') -%>
   <body>
-    <div class="container">
-      <!-- navbar for every page -->
-      <!-- <%- include("partials/header") %> -->
+    <!-- navbar for every page -->
+    <!-- <%- include("partials/header") %> -->
 
-      <main>
-        <!-- Fold Text -->
+    <main class="hero">
+      <!-- Fold Text -->
+      <div class="hero__content">
         <h1>Reliable UK Haulage keeping your business moving</h1>
         <h3>
           THG Logistics Group UK - Nationwide & European transport solutions
@@ -20,8 +20,15 @@
           time-critical planning and clear communication from collection to
           delivery.
         </p>
-      </main>
-
+      </div>
+      <div class="hero__image">
+        <img
+          src="/assets/img/hero/hero.webp"
+          alt="THG Logistics haulage vehicle"
+        />
+      </div>
+    </main>
+    <div class="container">
       <!-- footer for every page -->
       <%- include('partials/footer') %>
       <!-- Partials scripts tag here -->
