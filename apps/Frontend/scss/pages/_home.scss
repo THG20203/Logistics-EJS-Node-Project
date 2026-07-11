@@ -17,6 +17,7 @@
   color: variables.$colour-white;
   &__content {
     grid-column: 2;
+    margin-right: 2rem;
   }
   &__image {
     /* go to edge of container */
