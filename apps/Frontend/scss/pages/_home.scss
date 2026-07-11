@@ -6,8 +6,8 @@
   /* four columns for guttering -> not in container anymore */
   grid-template-columns:
     minmax(2rem, 1fr)
-    minmax(0, 64rem)
-    minmax(0, 64rem)
+    minmax(0, 65rem)
+    minmax(0, 65rem)
     minmax(2rem, 1fr);
   align-items: center;
   /* use min-height cause 3 height values in clamp = min, preferred, max */
@@ -17,7 +17,7 @@
   color: variables.$colour-white;
   &__content {
     grid-column: 2;
-    margin-right: 2rem;
+    max-width: 60rem;
   }
   &__image {
     /* go to edge of container */
