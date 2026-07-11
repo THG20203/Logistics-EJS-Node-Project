@@ -10,7 +10,8 @@
     minmax(0, 64rem)
     minmax(2rem, 1fr);
   align-items: center;
-  max-height: 65rem;
+  /* use min-height cause 3 height values in clamp = min, preferred, max */
+  min-height: clamp(48rem, 70vh, 65rem);
   background-color: variables.$colour-navy;
   /* test color value */
   color: variables.$colour-white;
@@ -20,14 +21,14 @@
   &__image {
     /* go to edge of container */
     grid-column: 3 / -1;
-    max-height: 65rem;
+    height: 100%;
     position: relative;
     &::after {
       content: "";
       height: 100%;
       width: 100%;
+      inset: 0;
       position: absolute;
-      top: 0;
       background: linear-gradient(
         to right,
         rgba(0, 12, 33) 0%,
