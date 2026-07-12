@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  padding: 3rem 0;
+  padding: 4rem 0;
   &__inner {
     /* use min cause choosing min value between two depending on the viewport.
     Already taking the 4rem padding off, so the navbar needs to shrink on smaller devices. */

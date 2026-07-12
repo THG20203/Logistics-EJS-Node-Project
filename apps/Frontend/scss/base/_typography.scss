@@ -15,6 +15,7 @@ h4 {
 }
 
 h1 {
+  /* min, 3rem add vw amount based on width of screen, max */
   font-size: clamp(4rem, 3rem + 2.2vw, 6rem);
   letter-spacing: -0.035em;
   color: variables.$colour-white;
@@ -39,7 +40,9 @@ h4 {
 p,
 ul,
 ol,
-li {
+li,
+div,
+span {
   font-size: 1.7rem;
   line-height: 1.75;
 }
