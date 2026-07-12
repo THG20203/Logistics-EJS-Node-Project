@@ -12,7 +12,7 @@
     minmax(2rem, 1fr);
   align-items: center;
   /* use min-height cause 3 height values in clamp = min, preferred, max */
-  min-height: clamp(50rem, 75vh, 70rem);
+  min-height: clamp(56rem, 78svh, 76rem);
   background-color: variables.$colour-navy;
   /* test color value */
   color: variables.$colour-white;
