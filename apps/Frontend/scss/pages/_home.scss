@@ -5,13 +5,14 @@
   /* minmax(minsize, maxsize) */
   /* four columns for guttering -> not in container anymore */
   grid-template-columns:
+    /* as minimum - want 2rem padding / guttering */
     minmax(2rem, 1fr)
     minmax(0, 65rem)
     minmax(0, 65rem)
     minmax(2rem, 1fr);
   align-items: center;
   /* use min-height cause 3 height values in clamp = min, preferred, max */
-  min-height: clamp(48rem, 70vh, 65rem);
+  min-height: clamp(50rem, 75vh, 70rem);
   background-color: variables.$colour-navy;
   /* test color value */
   color: variables.$colour-white;

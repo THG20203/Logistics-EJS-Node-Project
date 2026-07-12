@@ -1,21 +1,24 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 10;
+  padding: 3rem 0;
   &__inner {
-    max-width: 130rem;
+    /* use min cause choosing min value between two depending on the viewport.
+    Already taking the 4rem padding off, so the navbar needs to shrink on smaller devices. */
+    width: min(calc(100% - 4rem), 130rem);
     margin: 0 auto;
     color: #fff;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
   & img {
     max-width: 25rem;
-    margin-right: auto;
   }
   &__list {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
