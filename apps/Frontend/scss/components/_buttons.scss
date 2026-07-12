@@ -16,7 +16,6 @@
     background-color: variables.$colour-secondary;
     color: variables.$colour-white;
     position: relative;
-    &:active,
     &:focus-visible {
       outline: 0.15rem solid variables.$colour-white;
       outline-offset: 0.5rem;
@@ -32,7 +31,6 @@
       transform: translateX(-150%) skewX(20deg);
       transition: all 0.8s ease-in;
       background-color: variables.$colour-secondary-hover;
-      &:active,
       &:focus-visible {
         border-radius: 0.3rem;
       }
@@ -46,7 +44,6 @@
     color: variables.$colour-white;
     position: relative;
     transition: all 0.2s ease-in;
-    &:active,
     &:focus-visible {
       outline: 0.15rem solid variables.$colour-white;
       outline-offset: 0.5rem;

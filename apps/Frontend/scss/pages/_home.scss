@@ -16,8 +16,6 @@
   bottom controls appear and dissapear. */
   min-height: clamp(56rem, 78svh, 76rem);
   background-color: variables.$colour-navy;
-  /* test color value */
-  color: variables.$colour-white;
   &__content {
     grid-column: 2;
     max-width: 57rem;
@@ -61,5 +59,11 @@
       object-fit: cover;
       border-radius: 0;
     }
+  }
+  &__heading {
+    color: variables.$colour-white;
+  }
+  &__description {
+    color: variables.$colour-white-muted;
   }
 }
