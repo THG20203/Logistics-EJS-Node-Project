@@ -13,7 +13,7 @@
   overflow: hidden;
   box-sizing: border-box;
   &--primary {
-    background-color: variables.$colour-secondary;
+    background-color: variables.$colour-primary;
     color: variables.$colour-white;
     position: relative;
     &:focus-visible {
@@ -30,7 +30,7 @@
       z-index: 1;
       transform: translateX(-150%) skewX(20deg);
       transition: all 0.8s ease-in;
-      background-color: variables.$colour-secondary-hover;
+      background-color: variables.$colour-primary-hover;
       &:focus-visible {
         border-radius: 0.3rem;
       }

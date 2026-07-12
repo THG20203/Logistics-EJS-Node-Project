@@ -5,36 +5,35 @@ body {
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: variables.$font-primary;
+.h1,
+.h2,
+.h3 {
   font-weight: 600;
   line-height: 1.2;
 }
 
-h1 {
+.h1 {
   /* min, 3rem add vw amount based on width of screen, max */
   font-size: clamp(4rem, 3rem + 2.2vw, 6rem);
   /* em means relative to the font size of the element itself */
   letter-spacing: -0.035em;
 }
 
-h2 {
+.h2 {
   font-size: clamp(3rem, 2.5rem + 1.6vw, 4.6rem);
   letter-spacing: -0.025em;
 }
 
-h3 {
+.h3 {
   font-size: clamp(2.3rem, 2rem + 0.9vw, 3.2rem);
   letter-spacing: -0.015em;
 }
 
-h4 {
+.accent {
   font-size: clamp(1.9rem, 1.75rem + 0.5vw, 2.4rem);
   letter-spacing: -0.01em;
-  color: variables.$colour-secondary-hover;
+  color: variables.$colour-light-blue;
+  font-weight: 400;
 }
 
 p,
