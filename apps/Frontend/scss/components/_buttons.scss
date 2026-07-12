@@ -18,7 +18,7 @@
     position: relative;
     &:active,
     &:focus-visible {
-      outline: 0.15rem solid variables.$colour-secondary-hover;
+      outline: 0.15rem solid variables.$colour-white;
       outline-offset: 0.5rem;
     }
     &::before {
@@ -30,7 +30,7 @@
       border-radius: 0.3rem;
       z-index: 1;
       transform: translateX(-150%) skewX(20deg);
-      transition: all 1s;
+      transition: all 0.8s ease-in;
       background-color: variables.$colour-secondary-hover;
       &:active,
       &:focus-visible {
@@ -42,11 +42,18 @@
     }
   }
   &--secondary {
-    border: 1px solid #2f80ff;
-    color: #2f80ff;
-    transition: all 1s;
-    transition: all 1s;
+    border: 1px solid variables.$colour-white;
+    color: variables.$colour-white;
     position: relative;
+    transition: all 0.2s ease-in;
+    &:active,
+    &:focus-visible {
+      outline: 0.15rem solid variables.$colour-white;
+      outline-offset: 0.5rem;
+    }
+    &:hover {
+      background-color: variables.$colour-navy-light;
+    }
   }
   &__section {
     display: flex;
