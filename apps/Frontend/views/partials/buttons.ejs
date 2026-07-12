@@ -1,1 +1,11 @@
-<div></div>
+<div class="button__actions mt-md">
+  <a href="<%= primaryHref %>" class="button button--primary">
+    <%= primaryText %>
+  </a>
+
+  <% if (secondaryHref && secondaryText) { %>
+    <a href="<%= secondaryHref %>" class="button button--secondary">
+      <%= secondaryText %>
+    </a>
+  <% } %>
+</div>
