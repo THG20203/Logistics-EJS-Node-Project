@@ -8,16 +8,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* new stack context */
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
   &--primary {
     background-color: variables.$colour-secondary;
     color: variables.$colour-white;
+    position: relative;
+    &:active,
+    &:focus-visible {
+      outline: 0.15rem solid variables.$colour-secondary-hover;
+      outline-offset: 0.5rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 130%;
+      height: 100%;
+      inset: 0;
+      border-radius: 0.3rem;
+      z-index: 1;
+      transform: translateX(-150%) skewX(20deg);
+      transition: all 1s;
+      background-color: variables.$colour-secondary-hover;
+      &:active,
+      &:focus-visible {
+        border-radius: 0.3rem;
+      }
+    }
+    &:hover::before {
+      transform: translateX(-10%) skewX(20deg);
+    }
   }
   &--secondary {
     border: 1px solid #2f80ff;
     color: #2f80ff;
+    transition: all 1s;
+    transition: all 1s;
+    position: relative;
   }
   &__section {
     display: flex;
     gap: 3rem;
+    &--content {
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
   }
 }
