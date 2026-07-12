@@ -26,9 +26,9 @@ export const caseStudiesPage = (req, res) => {
   });
 };
 
-// export const aboutPage = (req, res) => {
-//   res.render("about", {
-//     pageTitle: "About",
+// export const companyPage = (req, res) => {
+//   res.render("company", {
+//     pageTitle: "Company",
 //   });
 // };
 

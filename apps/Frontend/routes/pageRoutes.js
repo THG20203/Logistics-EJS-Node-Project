@@ -6,7 +6,7 @@ import { homePage } from "../controllers/pageController.js";
 import { servicesPage } from "../controllers/pageController.js";
 // servicesPages mega menu
 import { fleetPage } from "../controllers/pageController.js";
-// fleet mega menu
+// fleet mega menu MAYBE with trucks
 import { caseStudiesPage } from "../controllers/pageController.js";
 // caseStudies mega menu
 
@@ -24,7 +24,8 @@ router.get("/", homePage);
 router.get("/services", servicesPage);
 router.get("/fleet", fleetPage);
 router.get("/case-studies", caseStudiesPage);
-// router.get("/about", aboutPage);
+// router.get("/company", companyPage);
+
 // router.get("/contact", contactPage);
 
 export default router;
