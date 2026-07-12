@@ -1,0 +1,18 @@
+/* reusable content class for things like case studies. policy pages, long form copy */
+.prose {
+  > * + * {
+    margin-top: 1.6rem;
+  }
+
+  > h2 {
+    margin-top: 5rem;
+  }
+
+  > h3 {
+    margin-top: 3.6rem;
+  }
+
+  > h4 {
+    margin-top: 2.8rem;
+  }
+}
