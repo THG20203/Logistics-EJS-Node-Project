@@ -17,10 +17,10 @@
     color: variables.$colour-white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
   &__logo {
     display: flex;
+    margin-right: auto;
   }
   & img {
     max-height: 3.5rem;
@@ -29,6 +29,7 @@
     display: flex;
     list-style: none;
     gap: 3rem;
+    margin-right: 3rem;
     & a {
       color: variables.$colour-white;
       text-decoration: none;

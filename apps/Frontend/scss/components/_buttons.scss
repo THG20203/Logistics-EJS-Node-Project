@@ -10,11 +10,11 @@
     color: variables.$colour-white;
   }
   &--secondary {
-    border: 1px solid #0f4fb3;
-    color: #0f4fb3;
+    border: 1px solid #2f80ff;
+    color: #2f80ff;
   }
   &__section {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
