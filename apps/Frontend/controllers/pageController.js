@@ -14,6 +14,18 @@ export const servicesPage = (req, res) => {
   });
 };
 
+export const fleetPage = (req, res) => {
+  res.render("fleet", {
+    pageTitle: "Fleet",
+  });
+};
+
+export const caseStudiesPage = (req, res) => {
+  res.render("caseStudies", {
+    pageTitle: "Case Studies",
+  });
+};
+
 // export const aboutPage = (req, res) => {
 //   res.render("about", {
 //     pageTitle: "About",

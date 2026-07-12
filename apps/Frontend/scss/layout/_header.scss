@@ -1,24 +1,29 @@
 @use "../abstracts/variables";
 
+/* Outer element controls things that should span the whole viewport 
+(i.e. stretch across whole screen, hold full width background, sit over hero, control padding) */
 .navbar {
   position: fixed;
   width: 100%;
   z-index: 10;
   padding: 4rem 0;
-  display: flex;
-  align-items: center;
+  /* Inner element keeps content aligned to sites max width */
   &__inner {
     /* use min cause choosing min value between two depending on the viewport.
     Already taking the 4rem padding off, so the navbar needs to shrink on smaller devices. */
     width: min(calc(100% - 4rem), 130rem);
+    max-height: 8rem;
     margin: 0 auto;
     color: variables.$colour-white;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+  &__logo {
+    display: flex;
+  }
   & img {
-    max-width: 25rem;
+    max-height: 3.5rem;
   }
   &__list {
     display: flex;

@@ -23,7 +23,7 @@ i.e. GET method should run homePage controller for / URl path
 router.get("/", homePage);
 router.get("/services", servicesPage);
 router.get("/fleet", fleetPage);
-router.get("/caseStudies", caseStudiesPage);
+router.get("/case-studies", caseStudiesPage);
 // router.get("/about", aboutPage);
 // router.get("/contact", contactPage);
 
