@@ -1,0 +1,21 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  &__inner {
+    max-width: 130rem;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  & img {
+    max-width: 25rem;
+    margin-right: auto;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+}
