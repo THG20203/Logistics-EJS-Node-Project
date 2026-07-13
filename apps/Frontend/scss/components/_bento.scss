@@ -1,0 +1,11 @@
+.bento {
+  display: grid;
+  /* minmax(0, value) 
+  - 0 value allows browser to shrink values SMALLER than natural width of content. 1fr = max size */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  max-height: 50rem;
+  height: 100%;
+  width: auto;
+}
