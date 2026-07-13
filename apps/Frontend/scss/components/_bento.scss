@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 
 .bento {
-  height: 75rem;
+  height: 70rem;
   background-color: variables.$colour-navy;
   &__grid {
     display: grid;
@@ -13,7 +13,7 @@
     /* We can't use fr unit for minimum size because browser first needs to know how small 
     every column is allowed to become. */
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr 40% 1fr;
     grid-template-areas:
       "haulage haulage european critical"
       "haulage haulage video video"
@@ -23,7 +23,7 @@
     width: auto;
   }
   &__item {
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     /* overflow: hidden for photos and videos */
     overflow: hidden;
     background-color: red;
@@ -47,6 +47,13 @@
     }
     &--transport-solution {
       grid-area: solution;
+      background-color: variables.$colour-dark-blue;
     }
+  }
+  &__video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
   }
 }
