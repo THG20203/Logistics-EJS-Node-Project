@@ -7,8 +7,8 @@
   grid-template-columns:
     /* as minimum - want 2rem padding / guttering */
     minmax(2rem, 1fr)
-    minmax(0, 61rem)
-    minmax(0, 71rem)
+    minmax(0, 62rem)
+    minmax(0, 70rem)
     minmax(2rem, 1fr);
   align-items: center;
   /* use min-height cause 3 height values in clamp = min, preferred, max */
