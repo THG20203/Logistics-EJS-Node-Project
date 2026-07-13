@@ -1,10 +1,12 @@
 @use "../abstracts/variables";
 
 .bento {
-  min-height: 60rem;
+  height: 75rem;
   background-color: variables.$colour-navy;
   &__grid {
     display: grid;
+    margin: 0 auto;
+    max-width: min(calc(100% - 4rem), 132rem);
     /* minmax(0, value) 
   - 0 value allows browser to shrink values SMALLER than natural width of content. 1fr = max size */
 
@@ -15,15 +17,36 @@
     grid-template-areas:
       "haulage haulage european critical"
       "haulage haulage video video"
-      "warehouse  storage choose choose";
+      "warehousing storage solution solution";
     gap: 2rem;
     height: 100%;
     width: auto;
   }
-  &__uk-haulage {
-    grid-area: "haulage";
-  }
-  &__transport-solution {
-    grid-area: "choose";
+  &__item {
+    border-radius: 1.2rem;
+    /* overflow: hidden for photos and videos */
+    overflow: hidden;
+    background-color: red;
+    &--uk-haulage {
+      grid-area: haulage;
+    }
+    &--european-haulage {
+      grid-area: european;
+    }
+    &--time-critical {
+      grid-area: critical;
+    }
+    &--video {
+      grid-area: video;
+    }
+    &--warehousing {
+      grid-area: warehousing;
+    }
+    &--storage {
+      grid-area: storage;
+    }
+    &--transport-solution {
+      grid-area: solution;
+    }
   }
 }
