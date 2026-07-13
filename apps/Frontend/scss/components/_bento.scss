@@ -1,11 +1,26 @@
+@use "../abstracts/variables";
+
 .bento {
-  display: grid;
-  /* minmax(0, value) 
+  min-height: 60rem;
+  background-color: variables.$colour-navy;
+  &__grid {
+    display: grid;
+    /* minmax(0, value) 
   - 0 value allows browser to shrink values SMALLER than natural width of content. 1fr = max size */
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(4, minmax(0, 1fr));
-  gap: 2rem;
-  max-height: 50rem;
-  height: 100%;
-  width: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "haulage haulage european critical"
+      "haulage haulage video video"
+      "warehouse  storage choose choose";
+    gap: 2rem;
+    height: 100%;
+    width: auto;
+  }
+  &__uk-haulage {
+    grid-area: "haulage";
+  }
+  &__transport-solution {
+    grid-area: "choose";
+  }
 }
