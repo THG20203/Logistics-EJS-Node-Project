@@ -7,6 +7,9 @@
     display: grid;
     /* minmax(0, value) 
   - 0 value allows browser to shrink values SMALLER than natural width of content. 1fr = max size */
+
+    /* We can't use fr unit for minimum size because browser first needs to know how small 
+    every column is allowed to become. */
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(3, minmax(0, 1fr));
     grid-template-areas:
