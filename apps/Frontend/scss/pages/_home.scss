@@ -34,7 +34,7 @@
       background: linear-gradient(
         to bottom,
         rgba(0, 12, 33, 0.9) 0%,
-        rgba(0, 12, 33, 0.7) 10%,
+        rgba(0, 12, 33, 0.7) 20%,
         transparent 100%
       );
     }
@@ -42,8 +42,13 @@
       display: block;
       width: 100%;
       height: 100%;
+      /* object-fit: Make the image completely fill its box without stretching it. */
       object-fit: cover;
-      object-position: 75% center;
+      /* object-position: tells the browser which part of the image to prioritise 
+      when cropping. */
+      /* 75% across the image: focus towards the right
+      25% down the image: focus towards the top */
+      object-position: 75% 20%;
       border-radius: 0;
     }
   }
