@@ -11,7 +11,7 @@
   &__inner {
     /* use min cause choosing min value between two depending on the viewport.
     Already taking the 4rem padding off, so the navbar needs to shrink on smaller devices. */
-    width: min(calc(100% - 4rem), 130rem);
+    width: min(calc(100% - 4rem), 132rem);
     max-height: 8rem;
     margin: 0 auto;
     color: variables.$colour-white;

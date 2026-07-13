@@ -1,5 +1,9 @@
 @use "../abstracts/variables";
 
+.mt-xxs {
+  margin-top: variables.$space-xxs;
+}
+
 .mt-xs {
   margin-top: variables.$space-xs;
 }
