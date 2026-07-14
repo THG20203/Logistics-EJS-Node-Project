@@ -2,16 +2,11 @@
 
 .bento {
   height: 70rem;
+  padding-inline: 2rem;
   background-color: variables.$colour-navy;
+
   &__grid {
     display: grid;
-    margin: 0 auto;
-    max-width: min(calc(100% - 4rem), 132rem);
-    /* minmax(0, value) 
-  - 0 value allows browser to shrink values SMALLER than natural width of content. 1fr = max size */
-
-    /* We can't use fr unit for minimum size because browser first needs to know how small 
-    every column is allowed to become. */
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr 40% 1fr;
     grid-template-areas:
@@ -19,63 +14,94 @@
       "haulage haulage video video"
       "warehousing storage solution solution";
     gap: 2rem;
-    height: 100%;
-    width: auto;
-  }
-  &__item {
-    border-radius: 0.3rem;
-    /* overflow: hidden for photos and videos */
-    overflow: hidden;
-    background-color: red;
-    &--uk-haulage {
-      grid-area: haulage;
-    }
-    &--european-haulage {
-      grid-area: european;
-    }
-    &--time-critical {
-      grid-area: critical;
-    }
-    &--video {
-      grid-area: video;
-      transition: all 2s ease-out;
-      position: relative;
-      &::before {
-        content: "Reliable UK Haulage";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: variables.$colour-dark-blue;
-        color: variables.$colour-white;
-        animation: move-overlay 1s ease-in-out 4s forwards;
-        // transform: translateX(-150%) skewX(20deg);
-      }
-    }
-    &--warehousing {
-      grid-area: warehousing;
-    }
-    &--storage {
-      grid-area: storage;
-    }
-    &--transport-solution {
-      grid-area: solution;
-      background-color: variables.$colour-dark-blue;
-    }
-  }
-  &__video {
+
     width: 100%;
     height: 100%;
+    max-width: 132rem;
+    margin-inline: auto;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    background-color: red;
+  }
+
+  &__item--uk-haulage {
+    grid-area: haulage;
+  }
+
+  &__item--european-haulage {
+    grid-area: european;
+  }
+
+  &__item--time-critical {
+    grid-area: critical;
+  }
+
+  &__item--video {
+    grid-area: video;
+    isolation: isolate;
+  }
+
+  &__item--warehousing {
+    grid-area: warehousing;
+  }
+
+  &__item--storage {
+    grid-area: storage;
+  }
+
+  &__item--transport-solution {
+    grid-area: solution;
+    background-color: variables.$colour-dark-blue;
+  }
+
+  &__video {
     display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+}
+
+.bento__item--video {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: 1;
+
+    width: 140%;
+    height: 100%;
+    background-color: variables.$colour-navy-light;
+
+    transform: translateX(-150%) skewX(20deg);
+    animation: move-overlay 2.2s ease-in 3s forwards;
+  }
+
+  &::after {
+    content: "Reliable UK Haulage";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: variables.$colour-white-muted;
+    font-weight: 600;
+    font-size: clamp(3.3rem, 3.05rem + 0.85vw, 4.3rem);
+    letter-spacing: -0.025em;
+    background: url("./assets/img/new-livery/fleet-from-above.webp") cover;
+    white-space: nowrap;
   }
 }
 
 @keyframes move-overlay {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-150%) skewX(20deg);
   }
 
   to {
-    transform: translateX(0);
+    transform: translateX(-10%) skewX(20deg);
   }
 }
