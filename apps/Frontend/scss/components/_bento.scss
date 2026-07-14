@@ -38,6 +38,18 @@
     }
     &--video {
       grid-area: video;
+      transition: all 2s ease-out;
+      position: relative;
+      &::before {
+        content: "Reliable UK Haulage";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$colour-dark-blue;
+        color: variables.$colour-white;
+        animation: move-overlay 1s ease-in-out 4s forwards;
+        // transform: translateX(-150%) skewX(20deg);
+      }
     }
     &--warehousing {
       grid-area: warehousing;
@@ -55,5 +67,15 @@
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+}
+
+@keyframes move-overlay {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
