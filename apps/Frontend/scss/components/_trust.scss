@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 
 .accreditations-trust {
-  background-color: variables.$colour-white;
+  background-color: variables.$colour-white-muted;
   &__content {
     margin: 0 auto;
     width: min(calc(100% - 4rem), 132rem);

@@ -11,6 +11,7 @@ body {
 .h4 {
   font-weight: 600;
   line-height: 1.2;
+  color: variables.$colour-navy;
 }
 
 .h1 {
@@ -21,22 +22,22 @@ body {
 }
 
 .h2 {
-  font-size: clamp(3.3rem, 3.05rem + 0.85vw, 4.3rem);
+  font-size: clamp(3rem, 2.85rem + 0.7vw, 3.9rem);
   letter-spacing: -0.025em;
 }
 
 .h3 {
-  font-size: clamp(2.65rem, 2.5rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3rem + 0.4vw, 2.9rem);
   letter-spacing: -0.015em;
 }
 
 .h4 {
-  font-size: clamp(2.1rem, 2.05rem + 0.25vw, 2.4rem);
+  font-size: clamp(1.9rem, 1.85rem + 0.2vw, 2.2rem);
   letter-spacing: -0.01em;
 }
 
 .accent {
-  font-size: clamp(1.9rem, 1.75rem + 0.5vw, 2.4rem);
+  font-size: clamp(1.7rem, 1.6rem + 0.35vw, 2.1rem);
   letter-spacing: -0.01em;
   color: variables.$colour-light-blue;
   font-weight: 400;
@@ -48,8 +49,12 @@ ol,
 li,
 div,
 span {
-  font-size: 1.7rem;
+  font-size: clamp(1.6rem, 1.56rem + 0.12vw, 1.7rem);
   line-height: 1.75;
+}
+
+p {
+  color: variables.$colour-navy-light;
 }
 
 small {

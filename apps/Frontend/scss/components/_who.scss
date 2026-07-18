@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+
+.who {
+  background-color: variables.$colour-white;
+  &__content {
+    margin: 0 auto;
+    width: min(calc(100% - 4rem), 132rem);
+    padding: 8rem 0;
+    display: flex;
+    gap: 6rem;
+  }
+  &__text-section {
+    max-width: 67rem;
+  }
+  &__image-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "office office"
+      "meeting cab";
+    width: 100%;
+    grid-gap: 1rem;
+  }
+  &__image-item {
+    border-radius: 0.3rem;
+    /* overflow hidden on same element that has border-radius */
+    overflow: hidden;
+    &--one {
+      grid-area: office;
+      max-height: 25rem;
+    }
+    &--two {
+      grid-area: meeting;
+    }
+    &--three {
+      grid-area: cab;
+    }
+    & img {
+      width: 100%;
+      display: block;
+      height: 100%;
+      /* object fit needs defined width, height */
+      object-fit: cover;
+    }
+  }
+}
