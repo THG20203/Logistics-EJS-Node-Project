@@ -16,7 +16,7 @@
   /* use min-height cause 3 height values in clamp = min, preferred, max */
   /* svh = small viewport height - matters on mobile - browser address bar and 
   bottom controls appear and dissapear. */
-  min-height: clamp(56rem, 78svh, 76rem);
+  min-height: clamp(55rem, 75svh, 75rem);
   background-color: variables.$colour-navy;
   &__content {
     grid-column: 2;
