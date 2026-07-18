@@ -20,9 +20,9 @@ export const fleetPage = (req, res) => {
   });
 };
 
-export const caseStudiesPage = (req, res) => {
-  res.render("caseStudies", {
-    pageTitle: "Case Studies",
+export const insightsPage = (req, res) => {
+  res.render("insights", {
+    pageTitle: "Insights",
   });
 };
 
