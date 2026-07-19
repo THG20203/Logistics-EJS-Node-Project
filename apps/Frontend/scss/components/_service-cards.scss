@@ -10,8 +10,10 @@
     width: min(calc(100% - 4rem), 132rem);
     padding: 8rem 0;
   }
-  &__heading,
-  &__text {
+  &__heading {
     color: variables.$colour-white;
+  }
+  &__text {
+    color: variables.$color-white-muted;
   }
 }
