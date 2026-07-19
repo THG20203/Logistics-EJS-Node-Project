@@ -11,9 +11,11 @@
     padding: 8rem 0;
     display: flex;
     gap: 6rem;
+    /* by default flex container is align-items: stretch - so image grid stretches 
+    to match height of text column. would have to do align-items: start to stop this */
   }
   &__text-section {
-    max-width: 60rem;
+    max-width: 58rem;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -33,7 +35,8 @@
     overflow: hidden;
     &--one {
       grid-area: office;
-      max-height: 25rem;
+      height: 100%;
+      max-height: 27rem;
     }
     &--two {
       grid-area: meeting;
