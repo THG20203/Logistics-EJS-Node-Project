@@ -1,0 +1,17 @@
+@use "../abstracts/variables";
+
+.service-cards {
+  background-color: variables.$colour-navy-light;
+  &__accent {
+    line-height: 1;
+  }
+  &__content {
+    margin: 0 auto;
+    width: min(calc(100% - 4rem), 132rem);
+    padding: 8rem 0;
+  }
+  &__heading,
+  &__text {
+    color: variables.$colour-white;
+  }
+}
