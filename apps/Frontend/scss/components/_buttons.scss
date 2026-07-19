@@ -15,11 +15,17 @@
     background-color: variables.$colour-primary;
     color: variables.$colour-white;
     position: relative;
+    &::before {
+      background-color: variables.$colour-dark-blue;
+    }
   }
   &--secondary {
     border: 1px solid variables.$colour-white;
     color: variables.$colour-white;
     position: relative;
+    &::before {
+      background-color: variables.$colour-navy-light;
+    }
   }
   &--primary,
   &--secondary {
@@ -38,7 +44,6 @@
       z-index: 1;
       transform: translateX(-150%) skewX(20deg);
       transition: all 0.8s ease-in;
-      background-color: variables.$colour-dark-blue;
     }
     &:hover::before {
       transform: translateX(-10%) skewX(20deg);
@@ -48,6 +53,22 @@
     color: variables.$colour-navy;
     background-color: transparent;
     border: 1px solid variables.$colour-navy;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 130%;
+      height: 100%;
+      inset: 0;
+      border-radius: 0.3rem;
+      z-index: 1;
+      transform: translateX(-150%) skewX(20deg);
+      transition: all 0.8s ease-in;
+      background-color: variables.$colour-white-muted;
+    }
+    &:hover::before {
+      transform: translateX(-10%) skewX(20deg);
+    }
   }
   &__section {
     display: flex;
