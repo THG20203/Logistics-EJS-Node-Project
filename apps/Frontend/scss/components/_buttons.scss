@@ -64,7 +64,7 @@
       z-index: 1;
       transform: translateX(-150%) skewX(20deg);
       transition: all 0.8s ease-in;
-      background-color: variables.$colour-white-muted;
+      background-color: rgba(0, 50, 155, 0.1);
     }
     &:hover::before {
       transform: translateX(-10%) skewX(20deg);
