@@ -38,13 +38,13 @@
     color: variables.$colour-white;
   }
   &__paragraph {
-    font-size: clamp(1.4rem, 1.36rem + 0.12vw, 1.5rem);
+    font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
     color: variables.$colour-white-muted;
   }
 
   &__link {
     color: variables.$colour-white;
     font-weight: 500;
-    font-size: clamp(1.4rem, 1.36rem + 0.12vw, 1.5rem);
+    font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
   }
 }
