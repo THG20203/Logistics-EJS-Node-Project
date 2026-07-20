@@ -18,4 +18,33 @@
   &__text {
     max-width: 58rem;
   }
+
+  /* Cards section */
+  &__cards {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* individual cards */
+.service-card {
+  background-color: variables.$colour-navy;
+  border-radius: 0.8rem;
+  padding: 3rem;
+  // &__content {
+
+  // }
+  &__heading {
+    color: variables.$colour-white;
+  }
+  &__paragraph {
+    font-size: clamp(1.4rem, 1.36rem + 0.12vw, 1.5rem);
+    color: variables.$colour-white-muted;
+  }
+
+  &__link {
+    color: variables.$colour-white;
+    font-weight: 500;
+    font-size: clamp(1.4rem, 1.36rem + 0.12vw, 1.5rem);
+  }
 }
