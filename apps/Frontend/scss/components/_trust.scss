@@ -22,6 +22,6 @@
   &__image {
     max-width: 18rem;
     /* contrast - 0 = completely black, 100 = represents original image */
-    filter: grayscale(90%) contrast(75%) opacity(0.8);
+    filter: grayscale(90%) contrast(70%) opacity(0.95);
   }
 }
