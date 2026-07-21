@@ -22,7 +22,7 @@
   /* Cards section */
   &__cards {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -30,10 +30,25 @@
 .service-card {
   background-color: variables.$colour-navy;
   border-radius: 0.8rem;
-  padding: 3rem;
-  // &__content {
+  overflow: hidden;
+  isolation: isolate;
+  height: 100%;
+  display: grid;
 
+  width: 100%;
+  // &__content {
   // }
+  &__image {
+    width: 100%;
+    max-height: 100%;
+    min-height: 28rem;
+    object-fit: contain;
+    object-position: top;
+  }
+  &__text {
+    padding: 3rem;
+    z-index: 2;
+  }
   &__heading {
     color: variables.$colour-white;
   }
