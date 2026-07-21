@@ -9,6 +9,9 @@
     margin: 0 auto;
     width: min(calc(100% - 4rem), 132rem);
     padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
   }
   &__intro {
     display: flex;
@@ -21,8 +24,9 @@
 
   /* Cards section */
   &__cards {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
   }
 }
 
@@ -32,7 +36,27 @@
   border-radius: 0.8rem;
   overflow: hidden;
   isolation: isolate;
-  display: grid;
+  &__image-container {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      height: clamp(9rem, 10vw, 11rem);
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 12, 33, 0.3) 10%,
+        rgba(0, 12, 33, 0.6) 20%,
+        rgba(0, 12, 33, 1) 100%
+      );
+    }
+  }
   &__image {
     width: 100%;
     height: clamp(20rem, 18vw, 25rem);
@@ -40,17 +64,18 @@
     object-fit: cover;
   }
   &__text {
-    padding: 3rem;
+    padding: 0 3rem 3rem;
     display: flex;
     flex-direction: column;
-    /* min-height element must be at least 30rem but can grow if content needs more room */
-    min-height: 30rem;
+    /* min-height element must be at least a height but can grow if content needs more room */
+    min-height: 25rem;
     & div {
       margin-top: auto;
     }
   }
   &__heading {
     color: variables.$colour-white;
+    line-height: 1;
   }
   &__paragraph {
     font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
