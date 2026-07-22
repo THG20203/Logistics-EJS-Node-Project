@@ -38,6 +38,7 @@
   isolation: isolate;
   &__image-container {
     position: relative;
+    /* height is for the after element to adhere to NOT the image */
     height: 50%;
     width: 100%;
     &::after {
@@ -45,7 +46,6 @@
       content: "";
       bottom: 0;
       left: 0;
-      height: 100%;
       width: 100%;
       height: clamp(9rem, 10vw, 11rem);
       background: linear-gradient(
@@ -95,7 +95,7 @@
       background-color: rgb(68, 166, 230);
       left: 0px;
       top: 100%;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       transform: scaleX(0);
       transform-origin: left center;
       border-radius: 1px;
