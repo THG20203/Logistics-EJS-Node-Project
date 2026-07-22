@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "THG Logistics Group UK Website",
   "version": "1.0.0",
-  "description": "Frontend EJS Haulage Website",
+  "description": "EJS Haulage Website",
   "license": "ISC",
   "author": "",
   "type": "module",
