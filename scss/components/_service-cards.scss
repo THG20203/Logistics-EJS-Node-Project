@@ -86,5 +86,23 @@
     color: variables.$colour-white;
     font-weight: 500;
     font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 0.3rem;
+      background-color: rgb(68, 166, 230);
+      left: 0px;
+      top: 100%;
+      margin-top: 1.5rem;
+      transform: scaleX(0);
+      transform-origin: left center;
+      border-radius: 1px;
+      transition: 0.5s ease-in;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
   }
 }
