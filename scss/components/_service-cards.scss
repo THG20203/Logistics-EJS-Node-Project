@@ -59,11 +59,19 @@
   }
   &__image {
     width: 100%;
+    /* why vw - viewport width -> responsive web layouts - element sizes = 
+    usually tied to page width because the layout changes as browser becomes wider / narrower */
     height: clamp(20rem, 18vw, 25rem);
     object-position: center;
     object-fit: cover;
   }
+  &__tag {
+    position: absolute;
+    top: -5rem;
+    color: white;
+  }
   &__text {
+    position: relative;
     padding: 0 3rem 3rem;
     display: flex;
     flex-direction: column;
