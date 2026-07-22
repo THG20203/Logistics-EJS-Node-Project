@@ -59,20 +59,22 @@
   }
   &__tag {
     position: absolute;
-    bottom: 2.5rem;
+    bottom: 2rem;
     color: variables.$colour-white-muted;
     padding: 0.6rem 1.2rem;
     border-radius: 0.3rem;
     backdrop-filter: blur(1.5rem);
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgb(255 255 255 / 10%);
-    font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
     z-index: 2;
     margin-left: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    .material-symbols-outlined {
+      font-size: 1.6rem;
+    }
     & span {
       font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
     }
