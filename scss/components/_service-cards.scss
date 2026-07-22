@@ -69,6 +69,13 @@
     font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
     z-index: 2;
     margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    & span {
+      font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
+    }
   }
   &__image {
     width: 100%;
