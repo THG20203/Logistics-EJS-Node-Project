@@ -25,6 +25,11 @@
     background-color: variables.$colour-navy;
     padding: 2rem;
   }
+  &__icon {
+    color: variables.$colour-dark-blue;
+    font-size: 4rem;
+    line-height: 1;
+  }
   &__heading {
     color: variables.$colour-white;
     position: relative;
