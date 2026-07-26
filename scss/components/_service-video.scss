@@ -104,6 +104,8 @@
   }
 
   /* no space after & means element has BOTH classes. .video-wrapper.playing */
+  /* video-wrapper.playing is more specific than video-wrapper, therefore trumps 
+  just video-wrapper */
   &.playing {
     &::after {
       opacity: 0;
