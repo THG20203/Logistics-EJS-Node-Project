@@ -27,5 +27,16 @@
   }
   &__heading {
     color: variables.$colour-white;
+    position: relative;
+    &::after {
+      content: "";
+      width: 10%;
+      position: absolute;
+      height: 0.3rem;
+      background-color: variables.$colour-light-blue;
+      left: 0;
+      border-radius: 1px;
+      margin-top: 4.1rem;
+    }
   }
 }
