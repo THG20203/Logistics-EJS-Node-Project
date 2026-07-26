@@ -115,5 +115,8 @@
       opacity: 0;
       pointer-events: none;
     }
+    /* ^ don't need & cause still need video-wrapper prefix to __play so not benefitting
+    for use of & to shorten declaration.
+    It is STILL a child element */
   }
 }
