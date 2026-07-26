@@ -8,7 +8,7 @@
   &__content {
     margin: 0 auto;
     width: min(calc(100% - 4rem), 132rem);
-    padding: 8rem 0 4rem;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -112,6 +112,9 @@
     font-weight: 500;
     font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-self: start;
     &::after {
       position: absolute;
       content: "";
