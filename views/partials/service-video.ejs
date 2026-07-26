@@ -1,9 +1,16 @@
 <section class="service-video">
   <div class="service-video__content">
     <!-- Video -->
-    <video class="service-video__video" controls>
-      <source src="/assets/videos/services-video.mp4" type="video/mp4" />
-    </video>
+    <div class="video-wrapper">
+      <video class="service-video__video" preload="metadata">
+        <source src="/assets/videos/services-video.mp4" type="video/mp4" />
+        <button class="video-wrapper__play" aria-label="Play video">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </video>
+    </div>
     <!-- Stats -->
     <div class="service-video__stats">
       <div class="service-video__stat">
