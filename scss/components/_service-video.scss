@@ -17,26 +17,70 @@
   }
   &__stat {
     border-radius: 0.8rem;
-    background-color: variables.$colour-navy;
     padding: 2rem;
+    &--first {
+      background: linear-gradient(
+        to bottom right,
+        variables.$colour-dark-blue 0%,
+        variables.$colour-navy-light 100%
+      );
+    }
+    &--second {
+      background-color: variables.$colour-white;
+    }
+  }
+  &__icon-container {
+    position: relative;
+    padding: 0.5rem;
+    display: flex;
+    justify-self: start;
+    border-radius: 0.8rem;
+    &--first {
+      background-color: variables.$colour-navy-light;
+      border: 1px solid rgb(255 255 255 / 10%);
+    }
+    &--second {
+      background-color: variables.$colour-white-muted;
+      border: 1px solid rgb(0 12 33 / 10%);
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 0.3rem;
+        background-color: variables.$colour-light-blue;
+        left: 0;
+        border-radius: 1px;
+        margin-top: -50%;
+      }
+    }
   }
   &__icon {
-    color: variables.$colour-dark-blue;
     font-size: 4rem;
     line-height: 1;
+    display: flex;
+    justify-self: center;
+    &--first {
+      color: variables.$colour-white;
+    }
+    &--second {
+      color: variables.$colour-dark-blue;
+    }
   }
   &__heading {
-    color: variables.$colour-white;
-    position: relative;
-    &::after {
-      content: "";
-      width: 10%;
-      position: absolute;
-      height: 0.3rem;
-      background-color: variables.$colour-light-blue;
-      left: 0;
-      border-radius: 1px;
-      margin-top: 4.1rem;
+    &--first {
+      color: variables.$colour-white;
+    }
+    &--second {
+      color: variables.$colour-navy;
+    }
+  }
+  &__paragraph {
+    font-size: clamp(1.5rem, 1.46rem + 0.12vw, 1.6rem);
+    &--first {
+      color: variables.$colour-white-muted;
+    }
+    &--second {
+      color: variables.$colour-navy-light;
     }
   }
 }
