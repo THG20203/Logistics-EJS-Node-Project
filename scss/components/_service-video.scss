@@ -13,11 +13,12 @@
   &__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
   &__stat {
     border-radius: 0.8rem;
     padding: 2rem;
+    position: relative;
     &--first {
       background: linear-gradient(
         to bottom right,
@@ -50,7 +51,7 @@
         background-color: variables.$colour-light-blue;
         left: 0;
         border-radius: 1px;
-        margin-top: -50%;
+        margin-top: -52%;
       }
     }
   }
