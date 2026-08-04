@@ -24,6 +24,7 @@
         linear-gradient(
           to right,
           rgba(variables.$colour-navy-light, 1) 0%,
+          rgba(variables.$colour-navy-light, 0.9) 60%,
           rgba(variables.$colour-dark-blue, 0.7) 100%
         ),
         url("/assets/img/svg/wave.svg");
@@ -36,6 +37,7 @@
         linear-gradient(
           to right,
           rgba(variables.$colour-white, 1) 0%,
+          rgba(variables.$colour-white, 0.9) 60%,
           rgba(variables.$colour-white, 0.6) 100%
         ),
         url("/assets/img/svg/wave.svg");
