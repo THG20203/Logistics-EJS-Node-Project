@@ -7,13 +7,13 @@
     width: min(calc(100% - 4rem), 132rem);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1.6rem;
     padding-bottom: 8rem;
   }
   &__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1.6rem;
   }
   &__stat {
     border-radius: 0.8rem;
